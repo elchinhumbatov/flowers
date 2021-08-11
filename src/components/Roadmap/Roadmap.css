@@ -1,0 +1,6 @@
+.breadcrumb li {
+  margin: 0 0 0 10px;
+}
+.breadcrumb a, .breadcrumb p {
+  font-size: 14px;
+}

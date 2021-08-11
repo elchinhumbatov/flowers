@@ -1,0 +1,6 @@
+header {
+  background: #E5E5E5;
+}
+.header-top, .header-middle {
+  border-bottom: .2px solid #103742;
+}
