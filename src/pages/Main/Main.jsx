@@ -1,11 +1,58 @@
 import React from 'react'
+import Advantage from './Advantage/Advantage'
+import InfoIcons from './InfoIcons/InfoIcons'
+import InstaPost from './InstaPost/InstaPost'
+import MainCards from './MainCards/MainCards'
+import MainSlider from './MainSlider/MainSlider'
+import Popular from './Popular/Popular'
+
+let mainCardsAPI = [
+  { title: 'Для любимой мамы ->', price: '5540 руб.', img: 'card0', action: 'Заказать' },
+  { title: 'Удиви свою половинку ->', price: '4540 руб.', img: 'card1', action: 'Заказать' },
+  { title: 'Букет дня', price: '3540 руб.', img: 'card2', action: 'Заказать' },
+];
+let interestCardsAPI = [
+  { title: 'День рождения!', text: 'Прекрасный повод сделать приятное', price: '2500 руб.', img: 'card3', action: 'Подарить' },
+  { title: 'Комбо набор №1', price: '2500 руб.', img: 'card4', action: 'Заказать' },
+  { title: 'Подарки', price: '2500 руб.', img: 'card5', action: 'Посмотреть' },
+];
+let popularProductsAPI = [
+  {title: 'Комплимент', price: '3540 руб.', img: 'p0'},
+  {title: '“Леди и Бродяга”', price: '3540 руб.', img: 'p1'},
+  {title: 'Пионовое дерево', price: '3540 руб.', img: 'p2'},
+  {title: 'Цветочный сад', price: '3540 руб.', img: 'p3'},
+  {title: 'Цветочный сад', price: '3540 руб.', img: 'p4'},
+  {title: 'Пионовое дерево', price: '3540 руб.', img: 'p2'},
+];
+let commentsAPI = [
+  {text: '“ Большое спасибо, прекрасный букет. Доставили во время. Хорошая обраная связь. Приятные цены. “', author: 'Александр Петрович', img: 'p5'},
+  {text: '“ Большое спасибо, прекрасный букет. Доставили во время. Хорошая обраная связь. Приятные цены. “', author: 'Александр Петрович', img: 'p5'},
+  {text: '“ Большое спасибо, прекрасный букет. Доставили во время. Хорошая обраная связь. Приятные цены. “', author: 'Александр Петрович', img: 'p5'},
+  {text: '“ Большое спасибо, прекрасный букет. Доставили во время. Хорошая обраная связь. Приятные цены. “', author: 'Александр Петрович', img: 'p5'},
+  {text: '“ Большое спасибо, прекрасный букет. Доставили во время. Хорошая обраная связь. Приятные цены. “', author: 'Александр Петрович', img: 'p5'},
+  {text: '“ Большое спасибо, прекрасный букет. Доставили во время. Хорошая обраная связь. Приятные цены. “', author: 'Александр Петрович', img: 'p5'},
+]
 
 function Main() {
   return (
-    <div>
-      <h1>Main</h1>
-    </div>
-  )
+    <main>
+      <MainSlider />
+      <MainCards data={mainCardsAPI} margin={"-50px"} title={false} />
+      <InfoIcons />
+      <Popular title={"Популярные букеты"} data={popularProductsAPI} />
+      <MainCards
+        data={interestCardsAPI}
+        margin={"0"}
+        title={"Вас заинтересует"}
+      />
+      <Popular title={"Вас заинтересует"} data={popularProductsAPI} />
+      <InstaPost />
+      <Advantage />
+      <section className="graybg">
+        <Popular title={"Ваши впечатления"} data={commentsAPI} comment={true} />
+      </section>
+    </main>
+  );
 }
 
 export default Main;

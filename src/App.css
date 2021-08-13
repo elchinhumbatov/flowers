@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Exo:wght@400;500&display=swap');
+@import "~slick-carousel/slick/slick.css"; 
+@import "~slick-carousel/slick/slick-theme.css";
 
 * {
   box-sizing: border-box;
@@ -12,4 +14,13 @@
 .container {
   max-width: 1140px;
   margin: auto;
+}
+.graybg {
+  background: #E5E5E5;
+}
+a {
+  text-decoration: none;
+}
+.slick-list {
+  padding: 30px 0 40px;
 }

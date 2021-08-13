@@ -1,15 +1,14 @@
 import React from 'react'
 
 function Dropdown({id}) {
+  const subcat = [ "Букеты", "Цветы", "Розы", "Пионы", "Сладости", "Композиции", "Кому", ];
+
   return (
-    <div>
-      <h1>{id}</h1>
+    <div >
+      <h1>{subcat[id]}</h1>
     </div>
   )
 }
 
-// const dropdownList = [
-//   []
-// ]
 
 export default Dropdown

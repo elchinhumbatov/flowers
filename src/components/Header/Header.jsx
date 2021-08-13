@@ -6,7 +6,7 @@ import Bottom from './bottom/Bottom';
 
 function Header() {
   return (
-    <header>
+    <header className='graybg'>
       <div className="header-top">
         <div className="container-outter">
           <Top />

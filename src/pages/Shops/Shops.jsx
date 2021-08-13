@@ -4,7 +4,7 @@ import './Shops.css';
 
 function Shops() {
   return (
-    <div className='shops-wrap'>
+    <div className='shops-wrap graybg'>
       <div className="container-outter">
         <Roadmap />
       </div>

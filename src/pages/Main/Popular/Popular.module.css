@@ -1,0 +1,40 @@
+.popularSection {
+  padding: 35px 0;
+}
+.sectionTitle {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 0 20px 0;
+}
+.sectionTitle h3 {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 28px;
+  color: #103742;
+}
+.sectionTitle p {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  text-align: center;
+  color: #962689;
+}
+.popularSlider {
+  position: relative;
+  background: #fff;
+}
+.btn {
+  position: absolute;
+  right: -40px;
+  top: 30px;
+  z-index: 9;
+  width: 35px;
+  height: 35px;
+  background: #FFFFFF;
+  border: 0.5px solid #E2E2E2;
+  border-radius: 2px;
+  text-align: center;
+  padding: 7px 0 0 0;
+  cursor: pointer;
+}

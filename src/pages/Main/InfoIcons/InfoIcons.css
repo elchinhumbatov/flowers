@@ -1,0 +1,28 @@
+.infoIconsWrap {
+  padding: 0 0 35px 0;
+}
+.infoIcons img {
+  width: 35px;
+  margin: 0 0 15px 0;
+}
+.infoIcon:first-child img {
+  width: 55px;
+}
+.infoIcons {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  text-align: center;
+  font-size: 14px;
+  line-height: 16px;
+  text-align: center;
+  color: #103742;
+}
+.infoIcon {
+  width: 20%;
+  margin: 0 5px;
+}
+.infoIcon:hover .info {
+  color: #962689;
+  cursor: default;
+}

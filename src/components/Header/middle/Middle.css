@@ -13,7 +13,6 @@ nav li {
 }
 nav li a {
   color: #103742;
-  text-decoration: none;
 }
 .other {
   display: flex;
