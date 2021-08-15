@@ -7,10 +7,12 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faWhatsapp, faTelegramPlane } from '@fortawesome/free-brands-svg-icons'
 import { Link } from 'react-router-dom';
 import Logo from '../../Logo/Logo';
+import MiddleNav from './MiddleNav';
 
 function Middle() {
   return (
     <div className="middle-info">
+      <MiddleNav />
       <Logo />
       <nav>
         <ul>

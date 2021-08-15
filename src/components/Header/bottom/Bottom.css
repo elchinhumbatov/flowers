@@ -27,9 +27,14 @@
   color: #000;
   cursor: auto;
 }
+.chevron {
+  color: #103742;
+  margin-left: 5px;
+}
 .dropContent::before {
   content: '';
   position: absolute;
+  left: 12px;
   top: -5px;
   background: #fff;
   width: 20px;
@@ -57,4 +62,18 @@
   position: absolute;
   top: 7px;
   left: 10px;
+}
+
+.catBurgerWrap {
+  display: none;
+}
+
+
+@media screen and (max-width: 900px) {
+  .bottom-info .categories {
+    display: none;
+  }
+  .catBurgerWrap {
+    display: block;
+  }
 }

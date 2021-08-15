@@ -53,3 +53,11 @@
   opacity: 0;
   transition: opacity .5s ease;
 }
+
+
+@media screen and (max-width: 900px) {
+  .card {width: 40%;}
+}
+@media screen and (max-width: 600px) {
+  .card {width: 80%;}
+}

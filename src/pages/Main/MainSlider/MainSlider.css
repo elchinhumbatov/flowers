@@ -36,3 +36,14 @@
 .headerBg button:active {
   transform: scale(.9);
 }
+
+
+@media screen and (max-width: 600px) {
+  .headerBg h1 {
+    font-size: 30px;
+  }
+  .headerBg {
+    text-align: center;
+    padding: 30px 10px;
+  }
+}

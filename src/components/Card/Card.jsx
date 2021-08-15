@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 function Card({card, id}) {
   const imgsrc = require(`../../assets/images/cards/${card.img}.png`);
   return (
-    <div className='card'>
+    <div className='card' id={id}>
       <div className="cardTitle">
         <h6>{card.title}</h6>
         <span>{card.text}</span>

@@ -1,5 +1,5 @@
 .popularSection {
-  padding: 35px 0;
+  padding: 35px 10px;
 }
 .sectionTitle {
   display: flex;
@@ -37,4 +37,9 @@
   text-align: center;
   padding: 7px 0 0 0;
   cursor: pointer;
+}
+
+
+@media screen and (max-width: 1024px) {
+  .btn {display: none;}
 }

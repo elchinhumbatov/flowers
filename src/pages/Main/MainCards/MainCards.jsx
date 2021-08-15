@@ -14,7 +14,7 @@ function MainCards({data, margin, title}) {
        <div className="cards" style={{marginTop: margin}}>
          {
            data.map((card, idx) => {
-             return <Card key={idx} card={card} />
+             return <Card key={idx} card={card} id={card.id} />
            })
          }
        </div>

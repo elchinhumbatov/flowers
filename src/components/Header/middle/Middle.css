@@ -48,3 +48,34 @@ nav li a {
   width: 22px;
   margin: 0 5px;
 }
+
+.middleNavBurWrap {
+  display: none;
+}
+.middleNavBur {
+  width: 300px;
+  padding: 50px 20px;
+}
+.middleNavBur ul {
+  flex-direction: column;
+}
+.middleNavBur ul li {
+  padding: 5px 0;
+  margin: 5px 0;
+}
+.middleNavBur .MuiDivider-root {
+  margin: 15px 0;
+}
+.middleNavBur .number p {
+  font-size: 20px;
+}
+
+
+@media screen and (max-width: 1024px) {
+  .middle-info nav, .other .contacts, .other .top-devider {
+    display: none;
+  }
+  .middleNavBurWrap {
+    display: block;
+  }
+}

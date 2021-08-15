@@ -12,7 +12,7 @@ let instaPostAPI = [
 
 function InstaPost() {
   return (
-    <section className='graybg' style={{padding: '35px 0'}}>
+    <section className='graybg' style={{padding: '35px 10px'}}>
       <div className="container">
         <div className={s.posts}>
           <div className={s.post}>

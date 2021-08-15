@@ -14,3 +14,12 @@
   line-height: 28px;
   color: #103742;
 }
+
+@media screen and (max-width: 900px) {
+  #card2 {display: none;}
+  .cards {justify-content: space-around;}
+}
+@media screen and (max-width: 600px) {
+  #card1 {display: none;}
+  .cards {justify-content: center;}
+}
