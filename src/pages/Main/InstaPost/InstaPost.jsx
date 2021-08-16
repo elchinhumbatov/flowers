@@ -14,28 +14,28 @@ function InstaPost() {
   return (
     <section className='graybg' style={{padding: '35px 10px'}}>
       <div className="container">
-        <div className={s.posts}>
-          <div className={s.post}>
-            <div className={s.postWrap}>
-              <div className={s.instaPost}>
-                <div data-mc-src="3e03c643-2c10-4fe6-9b83-381c2303eab4#instagram"></div>
-              </div>
+        <div className={s.instaPostsWrap}>
+          <div className={s.instaWrap}>
+            <div className={s.instaPost}>
+              <div data-mc-src="3e03c643-2c10-4fe6-9b83-381c2303eab4#instagram"></div>
             </div>
           </div>
-          {
-            instaPostAPI.map((item, idx) => {
-              let imgsrc = require('../../../assets/images/insta/'+item.img+'.png');
-              return <div className={s.post} key={idx}>
-                <div className={s.img}>
-                  <img src={imgsrc.default} alt="" />
+          <div className={s.posts}>
+            {
+              instaPostAPI.map((item, idx) => {
+                let imgsrc = require('../../../assets/images/insta/'+item.img+'.png');
+                return <div className={s.post} key={idx}>
+                  <div className={s.img}>
+                    <img src={imgsrc.default} alt="product" />
+                  </div>
+                  <div className={s.info}>
+                    <span>{item.price}</span>
+                    <span>Заказать</span>
+                  </div>
                 </div>
-                <div className={s.info}>
-                  <span>{item.price}</span>
-                  <span>Заказать</span>
-                </div>
-              </div>
-            })
-          }
+              })
+            }
+          </div>
         </div>
       </div>
     </section>

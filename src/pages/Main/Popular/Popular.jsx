@@ -40,6 +40,15 @@ function Popular({title, data, comment}) {
           nextArrow: false,
           prevArrow: false,
         }
+      },
+      {
+        breakpoint: 360,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          nextArrow: false,
+          prevArrow: false,
+        }
       }
     ]
   };

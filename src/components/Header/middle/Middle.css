@@ -44,9 +44,14 @@ nav li a {
 .social > :first-child {
   margin: 0 5px 0 30px;
 }
+.checkouts {
+  display: flex;
+  align-items: center;
+}
 .checkouts img {
   width: 22px;
   margin: 0 5px;
+  cursor: pointer;
 }
 
 .middleNavBurWrap {
@@ -69,6 +74,23 @@ nav li a {
 .middleNavBur .number p {
   font-size: 20px;
 }
+.heart, .basket {
+  position: relative;
+}
+.heartNotif, .basketNotif {
+  width: 20px;
+  height: 20px;
+  color: #DF2121;
+  border: 2px solid #DF2121;
+  border-radius: 50% 50% 50% 0;
+  position: absolute;
+  top: -17px;
+  right: -11px;
+  text-align: center;
+  font-size: 10px;
+  padding-top: 4px;
+}
+
 
 
 @media screen and (max-width: 1024px) {

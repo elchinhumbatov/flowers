@@ -1,0 +1,54 @@
+#alert-dialog-slide-title {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 19px;
+  color: #103742;
+  text-align: center;
+}
+.MuiPaper-root {
+  padding: 30px !important;
+  color: #103742;
+}
+#alert-dialog-slide-description {
+  font-size: 12px;
+  line-height: 16px;
+  text-align: center;
+  color: #103742;
+  margin-bottom: 25px;
+}
+#alert-dialog-btn {
+  background: #962689;
+  border: 0.2px solid #962689;
+  box-sizing: border-box;
+  border-radius: 5px;
+  color: #fff;
+  outline: none;
+  width: 100%;
+}
+#alert-dialog-slide-content .form-control label {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+  margin-bottom: 7px;
+}
+#alert-dialog-slide-content .form-control {
+  display: flex;
+  flex-direction: column;
+  margin: 7px 0;
+}
+#alert-dialog-slide-content .form-control:last-child {
+  display: block;
+}
+#alert-dialog-slide-content .form-control input {
+  padding: 9px 15px;
+  border-radius: 5px;
+  border: 0.2px solid rgb(16, 55, 66, .3);
+}
+
+
+@media screen and (max-width: 450px) {
+  .MuiPaper-root {
+    padding: 30px 0 !important;
+    margin: 5px !important;
+  }
+}

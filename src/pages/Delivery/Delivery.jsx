@@ -1,22 +1,21 @@
-import React from 'react';
+import React from 'react'
 import Roadmap from '../../components/Roadmap/Roadmap';
-import './Shops.css';
 
-function Shops() {
-  const shops = {
-    last: "Магазины",
+function Delivery() {
+  const delivery = {
+    last: "Доставка и оплата",
     links: [{ url: "/", text: "Flower place" }],
   };
   return (
-    <section className='shops-wrap graybg'>
+    <section className='graybg'>
       <div className="container-outter">
-        <Roadmap data={shops} />
+        <Roadmap data={delivery} />
       </div>
       <div className="container">
-        asd
+        <h1>Delivery</h1>
       </div>
     </section>
   )
 }
 
-export default Shops
+export default Delivery

@@ -1,5 +1,6 @@
 import React from 'react'
 import Advantage from './Advantage/Advantage'
+import CallBack from './CallBack/CallBack'
 import InfoIcons from './InfoIcons/InfoIcons'
 import InstaPost from './InstaPost/InstaPost'
 import MainCards from './MainCards/MainCards'
@@ -12,9 +13,9 @@ let mainCardsAPI = [
   { id: 'card2', title: 'Букет дня', price: '3540 руб.', img: 'card2', action: 'Заказать' },
 ];
 let interestCardsAPI = [
-  { title: 'День рождения!', text: 'Прекрасный повод сделать приятное', price: '2500 руб.', img: 'card3', action: 'Подарить' },
-  { title: 'Комбо набор №1', price: '2500 руб.', img: 'card4', action: 'Заказать' },
-  { title: 'Подарки', price: '2500 руб.', img: 'card5', action: 'Посмотреть' },
+  { id: 'card0', title: 'День рождения!', text: 'Прекрасный повод сделать приятное', price: '2500 руб.', img: 'card3', action: 'Подарить' },
+  { id: 'card1', title: 'Комбо набор №1', price: '2500 руб.', img: 'card4', action: 'Заказать' },
+  { id: 'card2', title: 'Подарки', price: '2500 руб.', img: 'card5', action: 'Посмотреть' },
 ];
 let popularProductsAPI = [
   {title: 'Комплимент', price: '3540 руб.', img: 'p0'},
@@ -50,6 +51,9 @@ function Main() {
       <Advantage />
       <section className="graybg">
         <Popular title={"Ваши впечатления"} data={commentsAPI} comment={true} />
+      </section>
+      <section className="graybg">
+        <CallBack />
       </section>
     </main>
   );

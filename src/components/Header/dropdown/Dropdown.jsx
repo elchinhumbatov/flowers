@@ -1,11 +1,11 @@
 import React from 'react'
 
 function Dropdown({id}) {
-  const subcat = [ "Букеты", "Цветы", "Розы", "Пионы", "Сладости", "Композиции", "Кому", ];
+  const cats = [ "Букеты", "Цветы", "Розы", "Пионы", "Сладости", "Композиции", "Кому", ];
 
   return (
     <div >
-      <h1>{subcat[id]}</h1>
+      <h1>{cats[id]}</h1>
     </div>
   )
 }
