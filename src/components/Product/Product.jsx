@@ -1,10 +1,10 @@
 import React from "react";
-import s from "./Products.module.css";
+import s from "./Product.module.css";
 import heart from "../../assets/images/icons/heart.png";
 import eye from "../../assets/images/icons/eye.png";
 import basket from "../../assets/images/icons/basket.png";
 
-function Products({ item, comment }) {
+function Product({ item, comment }) {
   const imgsrc = require("../../assets/images/products/" + item.img + ".png");
   return (
     <>
@@ -47,4 +47,4 @@ function Products({ item, comment }) {
   );
 }
 
-export default Products;
+export default Product;

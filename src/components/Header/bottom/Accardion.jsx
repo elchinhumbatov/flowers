@@ -5,6 +5,7 @@ import AccordionSummary from '@material-ui/core/AccordionSummary';
 import AccordionDetails from '@material-ui/core/AccordionDetails';
 import Typography from '@material-ui/core/Typography';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
+import Dropdown from '../dropdown/Dropdown';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -16,7 +17,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-function Accardion({cats}) {
+function Accardion({cats, subcats, handleCloseDrawer}) {
   const classes = useStyles();
   const [expanded, setExpanded] = React.useState(false);
 
@@ -35,10 +36,10 @@ function Accardion({cats}) {
                 aria-controls={`panel${idx+1}a-content`}
                 id={`panel${idx+1}a-header`}
               >
-                <Typography className={classes.heading}>{cat}</Typography>
+                <Typography className={classes.heading}> ustu{cat}</Typography>
               </AccordionSummary>
               <AccordionDetails>
-                <Typography>Podmenu dla {cat}</Typography>
+                <Dropdown subcat={subcats[idx]} displayOpt={'block'} handleCloseDrawer={handleCloseDrawer} />
               </AccordionDetails>
             </Accordion>
           )

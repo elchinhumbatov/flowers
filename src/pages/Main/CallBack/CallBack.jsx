@@ -10,7 +10,7 @@ import DialogContent from "@material-ui/core/DialogContent";
 import DialogContentText from "@material-ui/core/DialogContentText";
 import DialogTitle from "@material-ui/core/DialogTitle";
 import Slide from "@material-ui/core/Slide";
-import Checkbox from '@material-ui/core/Checkbox';
+import { useFormik } from 'formik';
 
 const Transition = React.forwardRef(function Transition(props, ref) {
   return <Slide direction="up" ref={ref} {...props} />;
@@ -18,11 +18,16 @@ const Transition = React.forwardRef(function Transition(props, ref) {
 
 function CallBack() {
   const [open, setOpen] = React.useState(false);
-  const [checked, setChecked] = React.useState(false);
-
-  const handleChange = (event) => {
-    setChecked(event.target.checked);
-  };
+  const formik = useFormik({
+    initialValues: {
+      fullName: '',
+      number: '',
+      wp: false
+    },
+    onSubmit: values => {
+      console.log(values);
+    }
+  });
 
   const handleClickOpen = () => {
     setOpen(true);
@@ -30,6 +35,7 @@ function CallBack() {
 
   const handleClose = () => {
     setOpen(false);
+    formik.handleSubmit();
   };
 
   return (
@@ -71,22 +77,39 @@ function CallBack() {
                     ближайшее время <br /> (09:00-21:00 по Московскому времени,
                     ежедневно)
                   </DialogContentText>
-                  <form action="">
+                  <form onSubmit={formik.handleSubmit} className={s.cbForm}>
                     <div className="form-control">
                       <label htmlFor="fullName">Имя/Фамилия</label>
-                      <input type="text" name="fullName" placeholder='Имя/Фамилия' />
+                      <input 
+                        type="text" 
+                        name="fullName" 
+                        placeholder='Имя/Фамилия'
+                        onChange={formik.handleChange}
+                        onBlur={formik.handleBlur}
+                        value={formik.values.fullName}
+                      />
                     </div>
                     <div className="form-control">
                       <label htmlFor="number">Контактный номер</label>
-                      <input type="text" name="number" placeholder='Контактный номер' />
+                      <input 
+                        type="text" 
+                        name="number" 
+                        placeholder='Контактный номер'
+                        onChange={formik.handleChange}
+                        onBlur={formik.handleBlur}
+                        value={formik.values.number}
+                      />
                     </div>
                     <div className="form-control">
-                      <label htmlFor="wp"> Связаться по Whatsapp</label>
-                      <Checkbox
-                        checked={checked}
-                        onChange={handleChange}
-                        inputProps={{ 'name': 'wp' }}
-                      />
+                      <label>
+                        Связаться по Whatsapp
+                        <input
+                          type="checkbox" 
+                          name="wp"
+                          onChange={formik.handleChange}
+                          value={formik.values.wp}
+                        />
+                      </label>
                     </div>
                   </form>
                 </DialogContent>

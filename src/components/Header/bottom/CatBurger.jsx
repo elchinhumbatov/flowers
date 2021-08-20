@@ -6,7 +6,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
 import Accardion from './Accardion';
 
-function CatBurger({cats}) {
+function CatBurger({cats, subcats}) {
   const [state, setState] = React.useState({ left: false });
 
   const toggleDrawer = (anchor, open) => (event) => {
@@ -16,6 +16,10 @@ function CatBurger({cats}) {
     setState({ ...state, [anchor]: open });
   };
 
+  const handleCloseDrawer = () => {
+    setState({ ...state, 'left': false });
+  }
+
   const list = (anchor) => (
     <div
       role="presentation"
@@ -23,7 +27,7 @@ function CatBurger({cats}) {
       className='middleNavBur'
     >
       <List>
-        <Accardion cats={cats} />
+        <Accardion cats={cats} subcats={subcats} handleCloseDrawer={handleCloseDrawer} />
       </List>
     </div>
   );
@@ -34,7 +38,7 @@ function CatBurger({cats}) {
         <Button onClick={toggleDrawer('left', true)}>
           <FontAwesomeIcon icon={faBars} />
         </Button>
-        <Drawer anchor={'left'} open={state['left']} onClose={toggleDrawer('left', false)}>
+        <Drawer anchor={'left'} open={state['left']} onClose={handleCloseDrawer}>
           {list('left')}
         </Drawer>
       </React.Fragment>

@@ -17,7 +17,7 @@ let interestCardsAPI = [
   { id: 'card1', title: 'Комбо набор №1', price: '2500 руб.', img: 'card4', action: 'Заказать' },
   { id: 'card2', title: 'Подарки', price: '2500 руб.', img: 'card5', action: 'Посмотреть' },
 ];
-let popularProductsAPI = [
+let popularProductAPI = [
   {title: 'Комплимент', price: '3540 руб.', img: 'p0'},
   {title: '“Леди и Бродяга”', price: '3540 руб.', img: 'p1'},
   {title: 'Пионовое дерево', price: '3540 руб.', img: 'p2'},
@@ -40,13 +40,13 @@ function Main() {
       <MainSlider />
       <MainCards data={mainCardsAPI} margin={"-50px"} title={false} />
       <InfoIcons />
-      <Popular title={"Популярные букеты"} data={popularProductsAPI} />
+      <Popular title={"Популярные букеты"} data={popularProductAPI} />
       <MainCards
         data={interestCardsAPI}
         margin={"0"}
         title={"Вас заинтересует"}
       />
-      <Popular title={"Вас заинтересует"} data={popularProductsAPI} />
+      <Popular title={"Вас заинтересует"} data={popularProductAPI} />
       <InstaPost />
       <Advantage />
       <section className="graybg">

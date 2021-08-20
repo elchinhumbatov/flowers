@@ -5,10 +5,10 @@ import heart from '../../../assets/images/icons/heart.png';
 import basket from '../../../assets/images/icons/basket.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faWhatsapp, faTelegramPlane } from '@fortawesome/free-brands-svg-icons'
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import Logo from '../../Logo/Logo';
 import MiddleNav from './MiddleNav';
-import Login from './Login';
+import Login from '../../Login/Login';
 
 function Middle() {
   const [showLogin, setShowLogin] = useState(false);
@@ -50,11 +50,11 @@ function Middle() {
             {showLogin && <Login toggleLogin={toggleLogin} />}
           </div>
           <div className="heart">
-            <Link to='/'><img src={heart} alt="heart" /></Link>
+            <NavLink to='/favorites'><img src={heart} alt="heart" /></NavLink>
             <div className="heartNotif">99</div>
           </div>
           <div className="basket">
-            <Link to='/'><img src={basket} alt="basket" /></Link>
+            <NavLink to='/basket'><img src={basket} alt="basket" /></NavLink>
             <div className="basketNotif">7</div>
           </div>
         </div>

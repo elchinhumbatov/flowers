@@ -43,3 +43,9 @@
 @media screen and (max-width: 1024px) {
   .btn {display: none;}
 }
+@media screen and (max-width: 344px) {
+  .sectionTitle {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
