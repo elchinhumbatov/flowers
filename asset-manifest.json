@@ -1,21 +1,22 @@
 {
   "files": {
-    "main.css": "/flowers/static/css/main.e94372a8.chunk.css",
-    "main.js": "/flowers/static/js/main.e619bd58.chunk.js",
-    "main.js.map": "/flowers/static/js/main.e619bd58.chunk.js.map",
+    "main.css": "/flowers/static/css/main.4354fa68.chunk.css",
+    "main.js": "/flowers/static/js/main.676e91eb.chunk.js",
+    "main.js.map": "/flowers/static/js/main.676e91eb.chunk.js.map",
     "runtime-main.js": "/flowers/static/js/runtime-main.f170fba5.js",
     "runtime-main.js.map": "/flowers/static/js/runtime-main.f170fba5.js.map",
     "static/css/2.a9944061.chunk.css": "/flowers/static/css/2.a9944061.chunk.css",
-    "static/js/2.28684852.chunk.js": "/flowers/static/js/2.28684852.chunk.js",
-    "static/js/2.28684852.chunk.js.map": "/flowers/static/js/2.28684852.chunk.js.map",
+    "static/js/2.f33481ef.chunk.js": "/flowers/static/js/2.f33481ef.chunk.js",
+    "static/js/2.f33481ef.chunk.js.map": "/flowers/static/js/2.f33481ef.chunk.js.map",
     "index.html": "/flowers/index.html",
     "static/css/2.a9944061.chunk.css.map": "/flowers/static/css/2.a9944061.chunk.css.map",
-    "static/css/main.e94372a8.chunk.css.map": "/flowers/static/css/main.e94372a8.chunk.css.map",
-    "static/js/2.28684852.chunk.js.LICENSE.txt": "/flowers/static/js/2.28684852.chunk.js.LICENSE.txt",
+    "static/css/main.4354fa68.chunk.css.map": "/flowers/static/css/main.4354fa68.chunk.css.map",
+    "static/js/2.f33481ef.chunk.js.LICENSE.txt": "/flowers/static/js/2.f33481ef.chunk.js.LICENSE.txt",
     "static/media/a1.c37dc6b0.png": "/flowers/static/media/a1.c37dc6b0.png",
     "static/media/a2.09ccf661.png": "/flowers/static/media/a2.09ccf661.png",
     "static/media/a3.33762946.png": "/flowers/static/media/a3.33762946.png",
     "static/media/advantage.be4be1c1.png": "/flowers/static/media/advantage.be4be1c1.png",
+    "static/media/b0.png": "/flowers/static/media/b0.61eb9d81.png",
     "static/media/CallBack.module.css": "/flowers/static/media/cb-bg.6828f958.png",
     "static/media/card0.png": "/flowers/static/media/card0.1e6a7f89.png",
     "static/media/card1.png": "/flowers/static/media/card1.6fcd8794.png",
@@ -41,8 +42,8 @@
   "entrypoints": [
     "static/js/runtime-main.f170fba5.js",
     "static/css/2.a9944061.chunk.css",
-    "static/js/2.28684852.chunk.js",
-    "static/css/main.e94372a8.chunk.css",
-    "static/js/main.e619bd58.chunk.js"
+    "static/js/2.f33481ef.chunk.js",
+    "static/css/main.4354fa68.chunk.css",
+    "static/js/main.676e91eb.chunk.js"
   ]
 }
