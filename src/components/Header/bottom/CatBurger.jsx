@@ -1,5 +1,5 @@
 import React from 'react';
-import Drawer from '@material-ui/core/Drawer';
+import SwipeableDrawer from "@material-ui/core/SwipeableDrawer";
 import Button from '@material-ui/core/Button';
 import List from '@material-ui/core/List';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -9,21 +9,21 @@ import Accardion from './Accardion';
 function CatBurger({cats, subcats}) {
   const [state, setState] = React.useState({ left: false });
 
-  const toggleDrawer = (anchor, open) => (event) => {
-    if (event.type === 'keydown' && (event.key === 'Tab' || event.key === 'Shift')) {
+  const toggleDrawer = (open) => (event) => {
+    if (event && event.type === "keydown" && (event.key === "Tab" || event.key === "Shift")) {
       return;
     }
-    setState({ ...state, [anchor]: open });
+    setState({ ...state, 'left': open });
   };
 
   const handleCloseDrawer = () => {
     setState({ ...state, 'left': false });
   }
 
-  const list = (anchor) => (
+  const list = () => (
     <div
       role="presentation"
-      onKeyDown={toggleDrawer(anchor, false)}
+      onKeyDown={toggleDrawer(false)}
       className='middleNavBur'
     >
       <List>
@@ -35,12 +35,17 @@ function CatBurger({cats, subcats}) {
   return (
     <div className='catBurgerWrap'>
       <React.Fragment>
-        <Button onClick={toggleDrawer('left', true)}>
+        <Button onClick={toggleDrawer(true)}>
           <FontAwesomeIcon icon={faBars} />
         </Button>
-        <Drawer anchor={'left'} open={state['left']} onClose={handleCloseDrawer}>
-          {list('left')}
-        </Drawer>
+        <SwipeableDrawer 
+          anchor={'left'} 
+          open={state['left']} 
+          onClose={handleCloseDrawer}
+          onOpen={toggleDrawer(true)}
+        >
+          {list()}
+        </SwipeableDrawer>
       </React.Fragment>
     </div>
   );

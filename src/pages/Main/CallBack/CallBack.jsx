@@ -16,6 +16,17 @@ const Transition = React.forwardRef(function Transition(props, ref) {
   return <Slide direction="up" ref={ref} {...props} />;
 });
 
+const validate = values => {
+  const errors = {};
+  if (!values.fullName) {
+    errors.fullName = 'Required'
+  }
+  if (!values.number) {
+    errors.number = 'Required'
+  }
+  return errors;
+}
+
 function CallBack() {
   const [open, setOpen] = React.useState(false);
   const formik = useFormik({
@@ -24,8 +35,10 @@ function CallBack() {
       number: '',
       wp: false
     },
+    validate,
     onSubmit: values => {
       console.log(values);
+      handleClose();
     }
   });
 
@@ -35,7 +48,7 @@ function CallBack() {
 
   const handleClose = () => {
     setOpen(false);
-    formik.handleSubmit();
+    formik.resetForm();
   };
 
   return (
@@ -88,6 +101,8 @@ function CallBack() {
                         onBlur={formik.handleBlur}
                         value={formik.values.fullName}
                       />
+                      {formik.touched.fullName && formik.errors.fullName ? 
+                        <small className={s.small}>{formik.errors.fullName}</small> : null}
                     </div>
                     <div className="form-control">
                       <label htmlFor="number">Контактный номер</label>
@@ -99,6 +114,8 @@ function CallBack() {
                         onBlur={formik.handleBlur}
                         value={formik.values.number}
                       />
+                      {formik.touched.number && formik.errors.number ? 
+                        <small className={s.small}>{formik.errors.number}</small> : null}
                     </div>
                     <div className="form-control">
                       <label>
@@ -114,7 +131,7 @@ function CallBack() {
                   </form>
                 </DialogContent>
                 <DialogActions>
-                  <Button onClick={handleClose} color="primary" id='alert-dialog-btn'>
+                  <Button onClick={formik.handleSubmit} color="primary" id='alert-dialog-btn'>
                     Звонок
                   </Button>
                 </DialogActions>

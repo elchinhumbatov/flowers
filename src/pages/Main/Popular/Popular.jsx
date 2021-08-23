@@ -4,6 +4,7 @@ import s from "./Popular.module.css";
 import Slider from "react-slick";
 import { Link } from "react-router-dom";
 import Product from "../../../components/Product/Product";
+import Testimonials from "../../../components/Testimonials/Testimonials";
 
 function Popular({title, data, comment}) {
   const settings = {
@@ -59,7 +60,10 @@ function Popular({title, data, comment}) {
           <Slider {...settings}>
             {
               data.map((item, idx) => {
-                return <Product item={item} key={idx} comment={comment} />
+                if (comment) {
+                  return <Testimonials item={item} key={idx} />
+                }
+                return <Product item={item} key={idx} /> 
               })
             }
           </Slider>

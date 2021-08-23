@@ -74,7 +74,7 @@ nav li a {
 .middleNavBur .number p {
   font-size: 20px;
 }
-.heart, .basket {
+.heartIcon {
   position: relative;
 }
 .heartNotif, .basketNotif {

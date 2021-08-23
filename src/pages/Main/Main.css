@@ -54,12 +54,10 @@
 
 
 @media screen and (max-width: 450px) {
-  .MuiPaper-root {
-    color: #103742;
-    margin: 5px !important;
-  }
   .MuiDialog-paper {
     padding: 10px 10px 30px;
+    color: #103742;
+    margin: 5px !important;
   }
 }
 @media screen and (max-width: 350px) {

@@ -2,13 +2,13 @@ import React, {useState} from 'react';
 import './Middle.css';
 import user from '../../../assets/images/icons/user.png';
 import heart from '../../../assets/images/icons/heart.png';
-import basket from '../../../assets/images/icons/basket.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faWhatsapp, faTelegramPlane } from '@fortawesome/free-brands-svg-icons'
 import { Link, NavLink } from 'react-router-dom';
 import Logo from '../../Logo/Logo';
 import MiddleNav from './MiddleNav';
 import Login from '../../Login/Login';
+import BasketDrawer from './BasketDrawer';
 
 function Middle() {
   const [showLogin, setShowLogin] = useState(false);
@@ -45,17 +45,16 @@ function Middle() {
         </div>
         <div className="top-devider" style={{'height': '40px'}}></div>
         <div className="checkouts">
-          <div className="user">
+          <div className="userIcon">
             <img src={user} alt="user" onClick={toggleLogin} />
             {showLogin && <Login toggleLogin={toggleLogin} />}
           </div>
-          <div className="heart">
+          <div className="heartIcon">
             <NavLink to='/favorites'><img src={heart} alt="heart" /></NavLink>
             <div className="heartNotif">99</div>
           </div>
-          <div className="basket">
-            <NavLink to='/basket'><img src={basket} alt="basket" /></NavLink>
-            <div className="basketNotif">7</div>
+          <div className="basketIcon">
+            <BasketDrawer />
           </div>
         </div>
       </div>

@@ -1,5 +1,5 @@
 import React from 'react';
-import Drawer from '@material-ui/core/Drawer';
+import SwipeableDrawer from "@material-ui/core/SwipeableDrawer";
 import Button from '@material-ui/core/Button';
 import List from '@material-ui/core/List';
 import Divider from '@material-ui/core/Divider';
@@ -11,27 +11,25 @@ import { faWhatsapp, faTelegramPlane } from '@fortawesome/free-brands-svg-icons'
 function MiddleNav() {
   const [state, setState] = React.useState({ left: false });
 
-  const toggleDrawer = (anchor, open) => (event) => {
-    if (event.type === 'keydown' && (event.key === 'Tab' || event.key === 'Shift')) {
+  const toggleDrawer = (open) => (event) => {
+    if (event && event.type === "keydown" && (event.key === "Tab" || event.key === "Shift")) {
       return;
     }
-    setState({ ...state, [anchor]: open });
+    setState({ ...state, 'left': open });
   };
 
-  const list = (anchor) => (
+  const list = () => (
     <div
       role="presentation"
-      onClick={toggleDrawer(anchor, false)}
-      onKeyDown={toggleDrawer(anchor, false)}
+      onClick={toggleDrawer(false)}
+      onKeyDown={toggleDrawer(false)}
       className='middleNavBur'
     >
       <List>
-        <ul>
-          <li><Link to='/'>Доставка и оплата</Link></li>
-          <li><Link to='/'>Как заказать</Link></li>
-          <li><Link to='/'>Отзывы</Link></li>
-          <li><Link to='/shops'>Магазины</Link></li>
-        </ul>
+        <li><Link to='/'>Доставка и оплата</Link></li>
+        <li><Link to='/'>Как заказать</Link></li>
+        <li><Link to='/'>Отзывы</Link></li>
+        <li><Link to='/shops'>Магазины</Link></li>
       </List>
       <Divider />
       <List>
@@ -55,12 +53,17 @@ function MiddleNav() {
   return (
     <div className='middleNavBurWrap'>
       <React.Fragment>
-        <Button onClick={toggleDrawer('left', true)}>
+        <Button onClick={toggleDrawer(true)}>
           <FontAwesomeIcon icon={faEllipsisV} />
         </Button>
-        <Drawer anchor={'left'} open={state['left']} onClose={toggleDrawer('left', false)}>
-          {list('left')}
-        </Drawer>
+        <SwipeableDrawer
+          anchor={'left'}
+          open={state['left']}
+          onClose={toggleDrawer(false)}
+          onOpen={toggleDrawer(true)}
+        >
+          {list()}
+        </SwipeableDrawer>
       </React.Fragment>
     </div>
   );

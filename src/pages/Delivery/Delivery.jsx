@@ -10,9 +10,9 @@ function Delivery() {
     <section className='graybg'>
       <div className="container-outter">
         <Roadmap data={delivery} />
-      </div>
-      <div className="container">
-        <h1>Delivery</h1>
+        <div className="title">
+          <h3>Delivery</h3>
+        </div>
       </div>
     </section>
   )

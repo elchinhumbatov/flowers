@@ -1,0 +1,33 @@
+.products {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 40px;
+}
+.products>div {
+  width: 17%;
+  margin: 10px;
+}
+
+@media screen and (max-width: 750px) {
+  .products {
+    padding: 40px 30px;
+  }
+  .products>div {
+    width: 20%;
+  }
+}
+@media screen and (max-width: 500px) {
+  .products {
+    padding: 40px 20px;
+  }
+  .products>div {
+    width: 43%;
+  }
+}
+@media screen and (max-width: 350px) {
+  .products {
+    justify-content: center;
+    padding: 40px 10px;
+  }
+}

@@ -55,6 +55,9 @@
 .actions button:active {
   transform: scale(.9);
 }
+.small {
+  color: red;
+}
 
 
 @media screen and (max-width: 1150px) {
