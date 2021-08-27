@@ -1,0 +1,16 @@
+.productInfo {
+  display: flex;
+  justify-content: space-between;
+}
+.imgWrap, .mainInfo {
+  width: 51%;
+}
+.imgWrap {
+  position: relative;
+  padding: 0 70px 0 0;
+  width: 41%;
+}
+.aboutProductWrap {
+  background: #fff;
+  margin: 50px 0;
+}

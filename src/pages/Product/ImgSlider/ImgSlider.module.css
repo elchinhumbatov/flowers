@@ -1,0 +1,30 @@
+.mainSlider {
+  width: 100%;
+  margin-bottom: 10px;
+}
+.mainSlider img{
+  width: 100%;
+}
+.secondSlider img{
+  width: 60px;
+  opacity: .6;
+}
+.btns {
+  position: absolute;
+  z-index: 9;
+  top: 45%;
+  margin: 0 !important;
+  cursor: pointer;
+}
+.btns svg {
+  font-size: 35px;
+}
+.btns path {
+  fill: gray;
+}
+.nextBtn {
+  right: 10px;
+}
+.prevBtn {
+  left: 10px;
+}

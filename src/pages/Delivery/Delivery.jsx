@@ -1,9 +1,13 @@
 import React from 'react'
 import Roadmap from '../../components/Roadmap/Roadmap';
+import { useLocation } from 'react-router-dom';
+import { useSelector } from 'react-redux';
 
 function Delivery() {
+  const {pathname} = useLocation();
+  const lastLink = useSelector(state => state.roadmap[pathname]);
   const delivery = {
-    last: "Доставка и оплата",
+    last: lastLink,
     links: [{ url: "/", text: "Flower place" }],
   };
   return (

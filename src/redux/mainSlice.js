@@ -14,12 +14,12 @@ export const mainSlice = createSlice({
       { id: 'card2', title: 'Подарки', price: '2500 руб.', img: 'card5', action: 'Посмотреть' },
     ],
     popularProducts: [
-      {title: 'Комплимент', price: '3540 руб.', img: 'p0'},
-      {title: '“Леди и Бродяга”', price: '3540 руб.', img: 'p1'},
-      {title: 'Пионовое дерево', price: '3540 руб.', img: 'p2'},
-      {title: 'Цветочный сад', price: '3540 руб.', img: 'p3'},
-      {title: 'Цветочный сад', price: '3540 руб.', img: 'p4'},
-      {title: 'Пионовое дерево', price: '3540 руб.', img: 'p2'},
+      {id: 0, title: 'Комплимент', price: '3540 руб.', img: 'p0'},
+      {id: 1, title: '“Леди и Бродяга”', price: '3540 руб.', img: 'p1'},
+      {id: 2, title: 'Пионовое дерево', price: '3540 руб.', img: 'p2'},
+      {id: 3, title: 'Цветочный сад', price: '3540 руб.', img: 'p3'},
+      {id: 4, title: 'Цветочный сад', price: '3540 руб.', img: 'p4'},
+      {id: 5, title: 'Пионовое дерево', price: '3540 руб.', img: 'p2'},
     ],
     testimonials: [
       {text: '“ Большое спасибо, прекрасный букет. Доставили во время. Хорошая обраная связь. Приятные цены. “', author: 'Александр Петрович', img: 'p5'},

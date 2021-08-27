@@ -1,0 +1,16 @@
+.zoomIn {
+  position: absolute;
+  right: 15px;
+  top: 0px;
+  width: 40px;
+  height: 40px;
+  background: rgba(255, 255, 255, 0.7);
+  border: .2px solid #103742;
+  box-sizing: border-box;
+  border-radius: 2px;
+  text-align: center;
+  padding-top: 10px;
+}
+.zoomIn svg {
+  font-size: 20px;
+}

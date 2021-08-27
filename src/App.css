@@ -13,6 +13,7 @@
 }
 .title {
   padding: 10px 5px 20px 10px;
+  margin-top: 15px;
 }
 .title p {
   font-size: 14px;
@@ -34,6 +35,18 @@
 a {
   text-decoration: none;
 }
-.slick-list {
+#mainSlider .slick-list {
   padding: 30px 0 40px;
+}
+#productSlider .slick-center img {
+  opacity: 1;
+  outline: none;
+}
+#productTabs .MuiTab-root {
+  text-transform: capitalize !important;
+}
+#productTabs .MuiPaper-elevation4 {
+  box-shadow: none !important;
+  background: #fff !important;
+  border-bottom: 1px solid silver;
 }

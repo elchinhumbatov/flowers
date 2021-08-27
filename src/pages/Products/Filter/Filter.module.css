@@ -1,0 +1,47 @@
+/* price */
+.inputs {
+  text-align: center;
+  margin: 10px 0;
+}
+.inputs input {
+  width: 80px;
+  padding: 7px 10px;
+  margin: 0 5px;
+  border: 1px solid silver;
+  border-radius: 3px;
+}
+/* color */
+.colors {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.color {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  margin: 7px;
+}
+/* composition */
+.label {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 7px 0;
+  cursor: pointer;
+  color: #103742;
+}
+.label span {
+  font-size: 14px;
+  line-height: 16px;
+}
+/* count */
+.count {
+  width: 100%;
+}
+.count input {
+  width: 100%;
+  border-radius: 3px;
+  border: 1px solid silver;
+  padding: 6px 10px;
+}
