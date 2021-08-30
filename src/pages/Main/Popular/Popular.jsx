@@ -14,7 +14,7 @@ function Popular({ title, data, comment }) {
           <Link to="/">Смотреть все</Link>
         </div>
         <div className={s.popularSlider}>
-          <SlickSlider>
+          <SlickSlider slides={comment ? 4 : 5}>
             {data.map((item, idx) => {
               if (comment) {
                 return <Testimonials item={item} key={idx} />;
@@ -22,14 +22,6 @@ function Popular({ title, data, comment }) {
               return <Product item={item} key={idx} />;
             })}
           </SlickSlider>
-          {/* <SlickSlider>
-            {data.map((item, idx) => {
-              if (comment) {
-                return <Testimonials item={item} key={idx} />;
-              }
-              return <Product item={item} key={idx} />;
-            })}
-          </SlickSlider> */}
         </div>
       </div>
     </section>

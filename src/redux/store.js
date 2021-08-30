@@ -4,6 +4,7 @@ import productsReducer from './productsSlice'
 import mainReducer from './mainSlice'
 import navigationReducer from './navigationSlice'
 import roadmapReducer from './roadmap'
+import deliveryReducer from './deliverySlice'
 
 export default configureStore({
   reducer: {
@@ -12,5 +13,6 @@ export default configureStore({
     mainPage: mainReducer,
     navigations: navigationReducer,
     roadmap: roadmapReducer,
+    deliveryPage: deliveryReducer,
   },
 })

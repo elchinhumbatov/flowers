@@ -24,6 +24,7 @@
   font-size: 30px;
   line-height: 35px;
   color: #103742;
+  margin-bottom: 7px;
 }
 .container {
   max-width: 1140px;
@@ -31,6 +32,9 @@
 }
 .graybg {
   background: #E5E5E5;
+}
+.whitebg {
+  background: #fff;
 }
 a {
   text-decoration: none;

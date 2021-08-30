@@ -34,7 +34,7 @@ function ProductMainInfo() {
           <div
             className={s.size}
             onClick={() => handleBg("small")}
-            style={{ borderColor: activeSize === "small" && "#962689" }}
+            style={ activeSize === "small" ? { borderColor: "#962689", boxShadow: '0 0 8px gray' } : null}
           >
             <p>2500 руб.</p>
             <span>Букет маленького размера</span>
@@ -42,7 +42,7 @@ function ProductMainInfo() {
           <div
             className={s.size}
             onClick={() => handleBg("medium")}
-            style={{ borderColor: activeSize === "medium" && "#962689" }}
+            style={ activeSize === "medium" ? { borderColor: "#962689", boxShadow: '0 0 8px gray' } : null}
           >
             <p>2500 руб.</p>
             <span>Букет маленького размера</span>
@@ -50,7 +50,7 @@ function ProductMainInfo() {
           <div
             className={s.size}
             onClick={() => handleBg("big")}
-            style={{ borderColor: activeSize === "big" && "#962689" }}
+            style={ activeSize === "big" ? { borderColor: "#962689", boxShadow: '0 0 8px gray' } : null}
           >
             <p>2500 руб.</p>
             <span>Букет маленького размера</span>

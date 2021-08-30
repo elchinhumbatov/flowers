@@ -1,0 +1,25 @@
+.wrapper {
+  padding-bottom: 20px;
+}
+.compositionWrap {
+  padding-top: 20px;
+  font-size: 14px;
+  line-height: 22px;
+  color: #103742;
+}
+.compositionWrap h5 {
+  font-size: 16px;
+  font-weight: 700;
+}
+.compositionWrap>p {
+  font-size: 14px;
+  font-weight: 700;
+}
+.composition {
+  display: flex;
+  margin: 15px 0;
+}
+.composition ul {
+  flex-direction: column;
+  margin-right: 50px;
+}

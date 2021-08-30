@@ -1,11 +1,14 @@
 import React from "react";
+import s from "./ProductTabs.module.css";
 import PropTypes from "prop-types";
 import { useTheme } from "@material-ui/core/styles";
 import AppBar from "@material-ui/core/AppBar";
 import Tabs from "@material-ui/core/Tabs";
 import Tab from "@material-ui/core/Tab";
-import Typography from "@material-ui/core/Typography";
 import Box from "@material-ui/core/Box";
+import Testimonials from "../../../components/Testimonials/Testimonials";
+import { useSelector } from "react-redux";
+import SlickSlider from "../../../components/SlickSlider/SlickSlider";
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -18,11 +21,7 @@ function TabPanel(props) {
       aria-labelledby={`full-width-tab-${index}`}
       {...other}
     >
-      {value === index && (
-        <Box p={3}>
-          <Typography>{children}</Typography>
-        </Box>
-      )}
+      {value === index && <Box p={3}>{children}</Box>}
     </div>
   );
 }
@@ -40,13 +39,14 @@ function a11yProps(index) {
   };
 }
 function ProductTabs() {
+  const testimonialsAPI = useSelector((state) => state.mainPage.testimonials);
   const [value, setValue] = React.useState(0);
   const theme = useTheme();
   const handleChange = (event, newValue) => {
     setValue(newValue);
   };
   return (
-    <div>
+    <div className={s.wrapper}>
       <AppBar position="static" color="default">
         <Tabs
           value={value}
@@ -63,10 +63,29 @@ function ProductTabs() {
         </Tabs>
       </AppBar>
       <TabPanel value={value} index={0} dir={theme.direction}>
-        Item One
+        <div className={s.compositionWrap}>
+          <h5>Состав букета</h5>
+          <div className={s.composition}>
+            <ul>
+              <li>Эвкалипт Цинерия</li>
+              <li>Лента атлас</li>
+              <li>Писташ</li>
+            </ul>
+            <div className={s.counts}>
+              <p>&#8212; 1 шт</p>
+              <p>&#8212; 1 шт</p>
+              <p>&#8212; 1 шт</p>
+            </div>
+          </div>
+          <p>Высота букета, см.: 45 см</p>
+        </div>
       </TabPanel>
       <TabPanel value={value} index={1} dir={theme.direction}>
-        Item Two
+        <SlickSlider slides={4}>
+          {testimonialsAPI.map((item, idx) => {
+            return <Testimonials item={item} key={idx} />;
+          })}
+        </SlickSlider>
       </TabPanel>
       <TabPanel value={value} index={2} dir={theme.direction}>
         Item Three

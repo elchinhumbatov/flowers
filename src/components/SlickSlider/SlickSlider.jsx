@@ -6,8 +6,8 @@ function SlickSlider(props) {
   const settings = {
     infinite: true,
     speed: 500,
-    slidesToShow: 5,
-    slidesToScroll: 5,
+    slidesToShow: props.slides,
+    slidesToScroll: props.slides,
     nextArrow: <SampleNextArrow />,
     prevArrow: <SamplePrevArrow />,
     responsive: [

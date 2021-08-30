@@ -7,10 +7,15 @@ import ImgSlider from "./ImgSlider/ImgSlider";
 import ProductZoom from "./ProductZoom/ProductZoom";
 import ProductMainInfo from "./ProductMainInfo/ProductMainInfo";
 import ProductTabs from "./ProductTabs/ProductTabs";
+import DeliveryOptions from "../Delivery/DeliveryOptions";
+import Recomendations from "./Recomendations/Recomendations";
+import SlickSlider from "../../components/SlickSlider/SlickSlider";
+import PaymentOptions from '../Delivery/PaymentOptions';
 
 function ProductPage() {
   const { id } = useParams();
   const products = useSelector((state) => state.productsPage.products);
+  const recomendations = useSelector((state) => state.productsPage.recomendations);
 
   let product = products.find((item) => item.id === +id);
 
@@ -27,7 +32,7 @@ function ProductPage() {
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
         </div>
       </div>
-      <div className="container">
+      <div className="container-outter">
         <div className={s.productInfo}>
           <div className={s.imgWrap}>
             <ImgSlider />
@@ -38,10 +43,29 @@ function ProductPage() {
           </div>
         </div>
       </div>
-      <div className={s.aboutProductWrap}>
-        <div className="container">
+      <div className='whitebg'>
+        <div className="container-outter">
           <div id="productTabs">
             <ProductTabs />
+          </div>
+        </div>
+      </div>
+      <div className="container-outter">
+        <div className={s.delivery}>
+          <h6>Доставка и оплата </h6>
+          <div style={{marginBottom: '30px'}}><DeliveryOptions /></div>
+          <PaymentOptions />
+        </div>
+      </div>
+      <div className="whitebg">
+        <div className="container-outter">
+          <div className={s.recomendationsWrap}>
+            <h3>Подарки для вас</h3>
+            <SlickSlider slides={5}>
+              {recomendations.map(item => {
+                return <Recomendations item={item} key={item.id} />
+              })}
+            </SlickSlider>
           </div>
         </div>
       </div>
