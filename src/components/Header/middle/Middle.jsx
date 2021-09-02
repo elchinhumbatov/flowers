@@ -1,20 +1,29 @@
-import React from 'react';
+import React, {useState} from 'react';
 import './Middle.css';
 import user from '../../../assets/images/icons/user.png';
 import heart from '../../../assets/images/icons/heart.png';
-import basket from '../../../assets/images/icons/basket.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faWhatsapp, faTelegramPlane } from '@fortawesome/free-brands-svg-icons'
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import Logo from '../../Logo/Logo';
+import MiddleNav from './MiddleNav';
+import Login from '../../Login/Login';
+import BasketDrawer from './BasketDrawer';
 
 function Middle() {
+  const [showLogin, setShowLogin] = useState(false);
+
+  const toggleLogin = () => {
+    setShowLogin(!showLogin);
+  }
+
   return (
     <div className="middle-info">
+      <MiddleNav />
       <Logo />
       <nav>
         <ul>
-          <li><Link to='/'>Доставка и оплата</Link></li>
+          <li><Link to='/delivery'>Доставка и оплата</Link></li>
           <li><Link to='/'>Как заказать</Link></li>
           <li><Link to='/'>Отзывы</Link></li>
           <li><Link to='/shops'>Магазины</Link></li>
@@ -36,9 +45,17 @@ function Middle() {
         </div>
         <div className="top-devider" style={{'height': '40px'}}></div>
         <div className="checkouts">
-          <img src={user} alt="user" />
-          <img src={heart} alt="heart" />
-          <img src={basket} alt="basket" />
+          <div className="userIcon">
+            <img src={user} alt="user" onClick={toggleLogin} />
+            {showLogin && <Login toggleLogin={toggleLogin} />}
+          </div>
+          <div className="heartIcon">
+            <NavLink to='/favorites'><img src={heart} alt="heart" /></NavLink>
+            <div className="heartNotif">99</div>
+          </div>
+          <div className="basketIcon">
+            <BasketDrawer />
+          </div>
         </div>
       </div>
     </div>

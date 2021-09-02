@@ -3,7 +3,8 @@ import React from "react";
 import s from "./Popular.module.css";
 import Slider from "react-slick";
 import { Link } from "react-router-dom";
-import Products from "../../../components/Products/Products";
+import Product from "../../../components/Product/Product";
+import Testimonials from "../../../components/Testimonials/Testimonials";
 
 function Popular({title, data, comment}) {
   const settings = {
@@ -19,6 +20,7 @@ function Popular({title, data, comment}) {
         settings: {
           slidesToShow: 4,
           slidesToScroll: 4,
+          arrows: false,
         }
       },
       {
@@ -26,13 +28,23 @@ function Popular({title, data, comment}) {
         settings: {
           slidesToShow: 3,
           slidesToScroll: 3,
+          arrows: false,
         }
       },
       {
         breakpoint: 480,
         settings: {
           slidesToShow: 2,
-          slidesToScroll: 2
+          slidesToScroll: 2,
+          arrows: false,
+        }
+      },
+      {
+        breakpoint: 360,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          arrows: false,
         }
       }
     ]
@@ -48,7 +60,10 @@ function Popular({title, data, comment}) {
           <Slider {...settings}>
             {
               data.map((item, idx) => {
-                return <Products item={item} key={idx} comment={comment} />
+                if (comment) {
+                  return <Testimonials item={item} key={idx} />
+                }
+                return <Product item={item} key={idx} /> 
               })
             }
           </Slider>

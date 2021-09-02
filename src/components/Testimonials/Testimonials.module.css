@@ -1,0 +1,29 @@
+
+.comment {
+  padding: 25px 10px;
+  border: 1px solid #E2E2E2;
+  border-radius: 10px;
+  text-align: center;
+  margin: 0 15px;
+}
+.quote {
+  position: relative;
+}
+.comment img {
+  width: 35px;
+  position: absolute;
+  top: -40px;
+}
+.text p {
+  font-weight: 300;
+  font-size: 13px;
+  line-height: 20px;
+  color: #103742;
+  margin: 0 0 40px 0;
+}
+.author p {
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 16px;
+  color: #103742;
+}

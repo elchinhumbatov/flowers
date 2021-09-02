@@ -1,0 +1,29 @@
+.div {
+  justify-content: space-between;
+  color: #103742;
+}
+.titleLink {
+  display: inline-block;
+  font-weight: 600;
+  color: #103742;
+  margin: 0 0 10px 0;
+  white-space: nowrap
+}
+.ul {
+  display: block;
+  margin-right: 30px;
+}
+.ul:last-child {margin: 0;}
+.lh {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 19px;
+}
+.li, .lh {
+  margin: 5px 0 !important;
+}
+.li a {
+  font-size: 14px;
+  color: #103742;
+  white-space: nowrap
+}

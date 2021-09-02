@@ -1,5 +1,5 @@
 .cardsWrap {
-  padding: 0 0 35px 0;
+  padding: 0 5px 35px 5px;
 }
 .cards {
   display: flex;
@@ -13,4 +13,13 @@
   font-size: 24px;
   line-height: 28px;
   color: #103742;
+}
+
+@media screen and (max-width: 900px) {
+  #card2 {display: none;}
+  .cards {justify-content: space-around;}
+}
+@media screen and (max-width: 600px) {
+  #card1 {display: none;}
+  .cards {justify-content: center;}
 }

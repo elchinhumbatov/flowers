@@ -5,18 +5,16 @@
 .categories {
   width: 70%;
 }
-.categories ul {
-  justify-content: space-between;
-}
 .categories li {
   position: relative;
   cursor: pointer;
-  margin: 0 5px;
+  margin: 0 50px 0 0;
 }
 .categories li:hover {
   color: #962689;
 }
 .dropContent {
+  display: none;
   position: absolute;
   top: 30px;
   background: #fff;
@@ -27,9 +25,14 @@
   color: #000;
   cursor: auto;
 }
+.chevron {
+  color: #103742;
+  margin-left: 5px;
+}
 .dropContent::before {
   content: '';
   position: absolute;
+  left: 12px;
   top: -5px;
   background: #fff;
   width: 20px;
@@ -39,9 +42,6 @@
 .bottom-info {
   display: flex;
   padding: 20px 10px;
-}
-.dropContent {
-  display: none;
 }
 .openDrop {
   display: block;
@@ -57,4 +57,18 @@
   position: absolute;
   top: 7px;
   left: 10px;
+}
+
+.catBurgerWrap {
+  display: none;
+}
+
+
+@media screen and (max-width: 1024px) {
+  .bottom-info .categories {
+    display: none;
+  }
+  .catBurgerWrap {
+    display: block;
+  }
 }

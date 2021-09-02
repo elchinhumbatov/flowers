@@ -1,6 +1,5 @@
 import React from "react";
 import { Link } from 'react-router-dom';
-import Visa from '../../Visa/Visa';
 
 function Group1() {
   return (
@@ -19,7 +18,6 @@ function Group1() {
           <Link to="/">Контакты</Link>
         </li>
       </ul>
-      <Visa />
     </div>
   );
 }

@@ -3,15 +3,19 @@ import Roadmap from '../../components/Roadmap/Roadmap';
 import './Shops.css';
 
 function Shops() {
+  const shops = {
+    last: "Магазины",
+    links: [{ url: "/", text: "Flower place" }],
+  };
   return (
-    <div className='shops-wrap graybg'>
+    <section className='shops-wrap graybg'>
       <div className="container-outter">
-        <Roadmap />
+        <Roadmap data={shops} />
       </div>
       <div className="container">
         asd
       </div>
-    </div>
+    </section>
   )
 }
 

@@ -4,9 +4,12 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronDown, faSearch } from "@fortawesome/free-solid-svg-icons";
 import ClickAwayListener from "@material-ui/core/ClickAwayListener";
 import Dropdown from "../dropdown/Dropdown";
+import CatBurger from "./CatBurger";
+import { useSelector } from 'react-redux';
 
 function Bottom() {
-  const cat = [ "Букеты", "Цветы", "Розы", "Пионы", "Сладости", "Композиции", "Кому", ];
+  const cats = useSelector(state => state.navigations.categories);
+  const subcats = useSelector(state => state.navigations.subCategories);
 
   const handleClick = (id) => {
     let div = document.getElementById(`drop`+id);
@@ -27,15 +30,16 @@ function Bottom() {
   return (
     <ClickAwayListener onClickAway={handleClickAway}>
       <div className="bottom-info">
+        <CatBurger cats={cats} subcats={subcats} />
         <div className='categories'>
           <ul>
-            {cat.map((item, idx) => {
+            {cats.map((item, idx) => {
               return (
                 <li onClick={() => handleClick(idx)} key={idx}>
                   {item}
-                  <FontAwesomeIcon icon={faChevronDown} />
+                  <FontAwesomeIcon icon={faChevronDown} className='chevron' />
                   <div className="dropContent" id={`drop`+idx}>
-                    <Dropdown id={idx} />
+                    <Dropdown subcat={subcats[idx]} displayOpt={'flex'} />
                   </div>
                 </li>
               );

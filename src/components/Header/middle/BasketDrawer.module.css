@@ -1,0 +1,135 @@
+.basketDrawerWrap {
+  width: 300px;
+  padding: 30px 20px;
+  color: #103742;
+}
+.closeDrawer {
+  margin-bottom: 30px;
+  text-align: right;
+}
+.closeDrawer svg {
+  font-size: 25px;
+  cursor: pointer;
+}
+.title {
+  margin: 15px 0;
+  font-weight: 600;
+  font-size: 18px;
+}
+.list ul {
+  flex-direction: column;
+}
+.list li {
+  padding: 15px 0 30px;
+}
+.itemWrap {
+  display: flex;
+  justify-content: space-between;
+}
+.imgBlock img {
+  width: 60px;
+  height: 100%;
+  object-fit: cover;
+}
+.infoBlock {
+  display: flex;
+  width: 100%;
+  margin-left: 10px;
+  justify-content: space-between;
+  align-content: space-between;
+  flex-wrap: wrap;
+}
+.infoItem {
+  width: 50%;
+}
+.itemTitle h5 {
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 16px;
+}
+.delete {
+  text-align: right;
+}
+.delete svg {
+  cursor: pointer;
+}
+.price {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+.price p {
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 16px;
+}
+.counts {
+  display: flex;
+  text-align: center;
+}
+.counts>* {
+  width: 32px;
+  background: none;
+  border: .2px solid rgba(16, 55, 66, .5);
+  padding: 3px 0;
+}
+.count {
+  border-radius: 0;
+  border-right: none;
+  border-left: none;
+}
+.dec {
+  border-radius: 3px 0 0 3px;
+}
+.inc {
+  border-radius: 0 3px 3px 0;
+}
+.total {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 0 40px;
+}
+.total p {
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 16px;
+}
+.btns {
+  text-align: center;
+}
+.btns button {
+  display: inline-block;
+  outline: none;
+  border-radius: 5px;
+  padding: 10px 0;
+  margin: 7px 0;
+  width: 80%;
+  border: 0.2px solid #103742;
+}
+.orderNow {
+  background: #962689;
+  color: #fff;
+}
+.toBasket {
+  border: 0.2px solid #103742;
+  background: none;
+}
+.toBasket a {
+  color: #103742;
+}
+.basketIcon {
+  position: relative;
+}
+.basketNotif {
+  width: 20px;
+  height: 20px;
+  color: #DF2121;
+  border: 2px solid #DF2121;
+  border-radius: 50% 50% 50% 0;
+  position: absolute;
+  top: -17px;
+  right: -8px;
+  text-align: center;
+  font-size: 10px;
+  padding-top: 4px;
+}

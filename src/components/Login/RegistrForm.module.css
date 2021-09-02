@@ -1,0 +1,84 @@
+.title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  border-bottom: 0.2px solid rgba(16, 55, 66, .3);
+  font-size: 16px;
+  line-height: 19px;
+  color: #103742;
+}
+.title p:last-child {
+  color: #962689;
+  cursor: pointer;
+}
+
+.formControl {
+  margin: 10px 0;
+}
+.formControl input {
+  width: 100%;
+  border: .2px solid rgba(16, 55, 66, .3);
+  border-radius: 5px;
+  padding: 8px 15px;
+}
+.formControl label {
+  display: inline-block;
+  margin-bottom: 7px;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  color: #103742;
+}
+.formControl small, .checboxes small {
+  color: red;
+  font-size: 12px;
+}
+.getCode {
+  display: flex;
+  justify-content: space-between;
+}
+.getCode label {
+  display: inline-block;
+  margin-bottom: 7px;
+  font-size: 14px;
+  line-height: 16px;
+  color: #103742;
+}
+.getCode input {
+  margin-right: 5px;
+}
+.checboxes {
+  display: flex;
+  margin: 7px 0;
+}
+.checboxes input {
+  margin-right: 7px;
+}
+.checboxes label {
+  font-size: 12px;
+  line-height: 14px;
+  color: #103742;
+}
+.formBtn {
+  width: 100%;
+  color: #fff;
+  background: #962689;
+  border-radius: 5px;
+  border: none;
+  padding: 9px 0;
+  margin: 15px 0 25px;
+}
+
+@media screen and (max-width: 375px) {
+  .formControl {
+    margin: 0;
+  }
+  .formControl input {
+    padding: 4px 10px;
+  }
+  .formBtn {
+    margin: 10px 0;
+  }
+}

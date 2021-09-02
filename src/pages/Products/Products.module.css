@@ -1,0 +1,16 @@
+.subtitle {
+  color: #103742;
+}
+.content {
+  display: flex;
+  justify-content: space-between;
+}
+.filter {
+  width: 20%;
+  min-width: 250px;
+  margin-right: 10px;
+}
+.body {
+  background: #fff;
+  width: 80%;
+}
