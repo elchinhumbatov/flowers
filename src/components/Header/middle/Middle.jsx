@@ -4,7 +4,7 @@ import user from '../../../assets/images/icons/user.png';
 import heart from '../../../assets/images/icons/heart.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faWhatsapp, faTelegramPlane } from '@fortawesome/free-brands-svg-icons'
-import { Link, NavLink } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import Logo from '../../Logo/Logo';
 import MiddleNav from './MiddleNav';
 import Login from '../../Login/Login';
@@ -23,10 +23,10 @@ function Middle() {
       <Logo />
       <nav>
         <ul>
-          <li><Link to='/delivery'>Доставка и оплата</Link></li>
-          <li><Link to='/'>Как заказать</Link></li>
-          <li><Link to='/'>Отзывы</Link></li>
-          <li><Link to='/shops'>Магазины</Link></li>
+          <li><NavLink activeClassName='activeNavName' to='/delivery'>Доставка и оплата</NavLink></li>
+          <li><NavLink activeClassName='activeNavName' to='/instruction'>Как заказать</NavLink></li>
+          <li><NavLink activeClassName='activeNavName' to='/feedbacks'>Отзывы</NavLink></li>
+          <li><NavLink activeClassName='activeNavName' to='/shops'>Магазины</NavLink></li>
         </ul>
       </nav>
       <div className="other">

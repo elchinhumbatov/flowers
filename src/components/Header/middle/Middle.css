@@ -93,6 +93,9 @@ nav li a {
 .basketNotif {
   right: -8px;
 }
+.activeNavName {
+  color: #962689;
+}
 
 
 

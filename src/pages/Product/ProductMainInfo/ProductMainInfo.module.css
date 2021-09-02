@@ -1,0 +1,81 @@
+.mainInfoWrap > div {
+  margin: 17px 0;
+  color: #103742;
+}
+.mainInfoWrap > div:first-child {margin: 0 0 17px 0;}
+.violet {
+  display: inline-block;
+  margin-left: 15px;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 22px;
+  color: #962689;
+  cursor: pointer;
+}
+.packing .violet {
+  margin-left: 0;
+}
+
+.rate span {
+  font-size: 14px;
+}
+.price p {
+  font-weight: 600;
+  font-size: 24px;
+}
+.price span {
+  font-size: 16px;
+  text-decoration-line: line-through;
+  color: #a9a9a9;
+}
+.card span {
+  font-weight: 600;
+  font-size: 16px;
+}
+.sizeWrap {
+  margin: 40px 0 !important;
+}
+.sizeWrap>p {
+  font-weight: 600;
+  font-size: 16px;
+  margin-bottom: 7px;
+}
+.sizes {
+  display: flex;
+  justify-content: space-between;
+}
+.size {
+  width: 30%;
+  background: #ffffff;
+  border: 1px solid silver;
+  box-sizing: border-box;
+  border-radius: 3px;
+  padding: 20px 25px;
+  text-align: center;
+  cursor: pointer;
+}
+.size span {
+  display: inline-block;
+  margin-top: 10px;
+  font-size: 12px;
+}
+.size p {
+  font-weight: 600;
+  font-size: 18px;
+}
+.orderBtn, .addToBasketBtn {
+  width: 100%;
+  border-radius: 5px;
+  padding: 15px 0;
+  text-align: center;
+  outline: none;
+  border: none;
+}
+.orderBtn {
+  background: #962689;
+  color: #fff;
+  margin-bottom: 15px;
+}
+.addToBasketBtn {
+  background: #fff;
+}

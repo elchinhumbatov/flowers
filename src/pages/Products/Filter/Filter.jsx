@@ -5,7 +5,10 @@ import AccordionSummary from "@material-ui/core/AccordionSummary";
 import Typography from "@material-ui/core/Typography";
 import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 import { makeStyles } from "@material-ui/core/styles";
-import Slider from '@material-ui/core/Slider';
+import Price from "./Price";
+import Colors from "./Colors";
+import Composition from "./Composition";
+import Count from "./Count";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -19,11 +22,7 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 function Filter() {
-  const [value, setValue] = React.useState([0, 100]);
   const classes = useStyles();
-  const handleChange = (event, newValue) => {
-    setValue(newValue);
-  };
   return (
     <div>
       <Accordion>
@@ -35,15 +34,7 @@ function Filter() {
           <Typography className={classes.heading}>По цене</Typography>
         </AccordionSummary>
         <AccordionDetails>
-          <Typography style={{width: '300px'}}>
-            <Slider
-              value={value}
-              onChange={handleChange}
-              valueLabelDisplay="auto"
-              aria-labelledby="range-slider"
-              // getAriaValueText={valuetext}
-            />
-          </Typography>
+          <Price minVal={0} maxVal={500} />
         </AccordionDetails>
       </Accordion>
 
@@ -56,9 +47,10 @@ function Filter() {
           <Typography className={classes.heading}>По цвету</Typography>
         </AccordionSummary>
         <AccordionDetails>
-          <Typography>second</Typography>
+          <Colors />
         </AccordionDetails>
       </Accordion>
+
       <Accordion>
         <AccordionSummary
           expandIcon={<ExpandMoreIcon />}
@@ -68,9 +60,10 @@ function Filter() {
           <Typography className={classes.heading}>Состав</Typography>
         </AccordionSummary>
         <AccordionDetails>
-          <Typography>third</Typography>
+          <Composition />
         </AccordionDetails>
       </Accordion>
+
       <Accordion>
         <AccordionSummary
           expandIcon={<ExpandMoreIcon />}
@@ -80,9 +73,10 @@ function Filter() {
           <Typography className={classes.heading}>Количество</Typography>
         </AccordionSummary>
         <AccordionDetails>
-          <Typography>last</Typography>
+          <Count />
         </AccordionDetails>
       </Accordion>
+
       <Accordion>
         <AccordionSummary
           expandIcon={<ExpandMoreIcon />}
@@ -92,7 +86,7 @@ function Filter() {
           <Typography className={classes.heading}>Длина</Typography>
         </AccordionSummary>
         <AccordionDetails>
-          <Typography>last</Typography>
+          <Price minVal={0} maxVal={200} />
         </AccordionDetails>
       </Accordion>
     </div>

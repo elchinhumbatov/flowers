@@ -1,0 +1,50 @@
+.optionsWrap {
+  color: #103742;
+  padding: 30px 0 50px;
+}
+.options {
+  display: flex;
+  justify-content: space-between;
+}
+.optionsWrap h5, .paymentsWrap h5 {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 22px;
+  margin-bottom: 25px;
+}
+.options h6 {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 22px;
+  margin-bottom: 20px;
+}
+.options span {
+  display: inline-block;
+  height: 10px;
+  width: 10px;
+  border-radius: 50%;
+  background: #962689;
+  margin-right: 15px;
+}
+.options p {
+  font-size: 14px;
+  margin: 10px 0;
+}
+.paymentsWrap {
+  padding: 35px 0;
+  color: #103742;
+}
+.payments {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding-top: 20px;
+  text-align: center;
+}
+.payment p {
+  font-size: 18px;
+  line-height: 22px;
+}
+.payment:nth-child(1) img {width: 50px;}
+.payment:nth-child(2) img {width: 50px;}
+.payment img {width: 30px; margin-bottom: 10px;}

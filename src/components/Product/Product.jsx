@@ -3,6 +3,7 @@ import s from "./Product.module.css";
 import heart from "../../assets/images/icons/heart.png";
 import eye from "../../assets/images/icons/eye.png";
 import basket from "../../assets/images/icons/basket.png";
+import { Link } from "react-router-dom";
 
 function Product({ item }) {
   const imgsrc = require("../../assets/images/products/" + item.img + ".png");
@@ -15,7 +16,9 @@ function Product({ item }) {
             <img src={heart} alt="fav" />
           </div>
           <div>
-            <img src={eye} alt="see" />
+            <Link to={`/products/${item.id}`}>
+              <img src={eye} alt="see" />
+            </Link>
           </div>
           <div>
             <img src={basket} alt="basket" />
