@@ -39,6 +39,7 @@
 a {
   text-decoration: none;
 }
+
 #mainSlider .slick-list {
   padding: 30px 0 40px;
 }
@@ -53,4 +54,32 @@ a {
   box-shadow: none !important;
   background: #fff !important;
   border-bottom: 1px solid silver;
+}
+.MuiButton-root {
+  text-transform: capitalize !important;
+}
+#sort .MuiAutocomplete-inputRoot[class*="MuiOutlinedInput-root"] {
+  padding: 0 0 0 5px !important;
+}
+#sort .MuiInputLabel-outlined {
+  transform: translate(14px, 11px) scale(1) !important;
+}
+#sort .MuiInputLabel-outlined.MuiInputLabel-shrink {
+  transform: translate(14px, -6px) scale(.75) !important;
+}
+
+
+#productsBanner {
+  /* width: 100%; */
+  height: 200px;
+  border: 1px solid black;
+  border-radius: 10px;
+  flex-basis: 100%;
+}
+.activeGrayBg {
+  background: #E9E9E9;
+}
+small {
+  color: red;
+  font-size: 12px;
 }

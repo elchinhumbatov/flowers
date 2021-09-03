@@ -1,0 +1,28 @@
+.body {
+  display: flex;
+  padding: 0 5px;  
+}
+.ul {
+  width: 250px;
+  padding: 22px 0;
+  background: #fff;
+  border-radius: 5px;
+}
+.ul a, .ul li:last-child {
+  display: flex;
+  align-items: center;
+  padding: 13px 25px;
+  color: #103742;
+  font-size: 15px;
+  font-weight: 600;
+}
+.ul a span, .ul li:last-child span {
+  margin-left: 15px;
+}
+.rightBlock {
+  background: #FFFFFF;
+  border-radius: 5px;
+  padding: 25px 0;
+  margin-left: 15px;
+  width: 100%;
+}

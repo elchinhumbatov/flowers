@@ -1,0 +1,30 @@
+.wrapper {
+  color: #103742;
+  padding: 0 35px;
+}
+.form {
+  width: 50%;
+}
+.formControl {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+.formControl label {
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 16px;
+  margin-bottom: 10px;
+}
+.formControl input {
+  width: 100%;
+  border: .2px solid silver;
+  padding: 10px 15px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+.btn {
+  width: 70%;
+  display: block;
+  margin: 15px auto;
+}

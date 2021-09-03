@@ -6,6 +6,9 @@
 }
 ul {
   list-style: none;
+}
+nav ul {
+  list-style: none;
   display: flex;
 }
 nav li {
@@ -64,9 +67,11 @@ nav li a {
 .middleNavBur ul {
   flex-direction: column;
 }
-.middleNavBur ul li {
-  padding: 5px 0;
-  margin: 5px 0;
+.middleNavBur ul li a {
+  display: inline-block;
+  padding: 10px 0;
+  width: 100%;
+  color: #103742;
 }
 .middleNavBur .MuiDivider-root {
   margin: 15px 0;
@@ -94,8 +99,11 @@ nav li a {
   right: -8px;
 }
 .activeNavName {
-  color: #962689;
+  color: #962689 !important;
 }
+#toCab ul {
+  display: block;
+} 
 
 
 

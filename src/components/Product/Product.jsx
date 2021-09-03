@@ -5,10 +5,10 @@ import eye from "../../assets/images/icons/eye.png";
 import basket from "../../assets/images/icons/basket.png";
 import { Link } from "react-router-dom";
 
-function Product({ item }) {
+function Product({ item, productWidth }) {
   const imgsrc = require("../../assets/images/products/" + item.img + ".png");
   return (
-    <div className={s.product}>
+    <div className={s.product} style={{width: productWidth}}>
       <div className={s.imgBox}>
         <img src={imgsrc.default} alt="product" />
         <div className={s.hotIcons}>

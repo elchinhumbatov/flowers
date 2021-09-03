@@ -7,6 +7,8 @@ import Delivery from '../pages/Delivery/Delivery';
 import Basket from '../pages/Basket/Basket';
 import Products from '../pages/Products/Products';
 import ProductPage from "../pages/Product/ProductPage";
+import Instructions from '../pages/Instructions/Instructions';
+import Cabinet from '../pages/Cabinet/Cabinet';
 
 function RouterConfig() {
   return (
@@ -16,8 +18,10 @@ function RouterConfig() {
         <Route path="/flowers" component={Main} exact />
         <Route path="/shops" component={Shops} />
         <Route path="/delivery" component={Delivery} />
+        <Route path="/instructions" component={Instructions} />
         <Route path="/products" component={Products} exact />
         <Route path="/products/:id" component={ProductPage} />
+        <Route path="/cabinet" component={Cabinet} />
         <Route path="/favorites" component={Favorites} />
         <Route path="/basket" component={Basket} />
       </Switch>

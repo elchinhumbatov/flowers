@@ -31,10 +31,6 @@
   line-height: 16px;
   color: #103742;
 }
-.formControl small, .checboxes small {
-  color: red;
-  font-size: 12px;
-}
 .getCode {
   display: flex;
   justify-content: space-between;

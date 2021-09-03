@@ -1,6 +1,9 @@
 .subtitle {
   color: #103742;
 }
+.sortWrap {
+  margin-bottom: 20px;
+}
 .content {
   display: flex;
   justify-content: space-between;
@@ -13,4 +16,21 @@
 .body {
   background: #fff;
   width: 80%;
+}
+.products {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 30px;
+}
+.products>div {
+  margin: 10px;
+  transition: width .2s ease;
+}
+
+@media screen and (max-width: 750px) {
+  .products {
+    justify-content: center;
+    padding: 40px 10px;
+  }
 }

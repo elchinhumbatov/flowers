@@ -10,7 +10,7 @@
   white-space: nowrap
 }
 .ul {
-  display: block;
+  display: block !important;
   margin-right: 30px;
 }
 .ul:last-child {margin: 0;}

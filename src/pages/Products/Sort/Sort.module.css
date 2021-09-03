@@ -1,0 +1,26 @@
+.wrapper {
+  display: flex;
+  align-items: center;
+}
+.view {
+  display: flex;
+  align-items: center;
+}
+.view > * {
+  margin-right: 10px;
+}
+.view > *:last-child {
+  margin-right: 0;
+}
+.view svg {
+  cursor: pointer;
+}
+.divider {
+  width: 0px;
+  height: 30px;
+  border: 1px solid #103742;
+  margin: 0 20px;
+}
+.priceSort svg {
+  margin-left: 15px;
+}

@@ -1,6 +1,6 @@
 .optionsWrap {
   color: #103742;
-  padding: 30px 0 50px;
+  padding: 30px 5px 50px;
 }
 .options {
   display: flex;
@@ -31,7 +31,7 @@
   margin: 10px 0;
 }
 .paymentsWrap {
-  padding: 35px 0;
+  padding: 35px 5px;
   color: #103742;
 }
 .payments {
@@ -43,8 +43,18 @@
 }
 .payment p {
   font-size: 18px;
-  line-height: 22px;
 }
 .payment:nth-child(1) img {width: 50px;}
 .payment:nth-child(2) img {width: 50px;}
 .payment img {width: 30px; margin-bottom: 10px;}
+
+
+@media screen and (max-width: 560px) {
+  .options {flex-direction: column;} 
+}
+@media screen and (max-width: 500px) {
+  .payment:nth-child(1) img {width: 30px;}
+  .payment:nth-child(2) img {width: 30px;}
+  .payment img {width: 17px; margin-bottom: 10px;}
+  .payment p {font-size: 14px;}
+}

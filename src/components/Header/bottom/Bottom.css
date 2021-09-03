@@ -5,6 +5,9 @@
 .categories {
   width: 70%;
 }
+.categories ul {
+  display: flex;
+}
 .categories li {
   position: relative;
   cursor: pointer;

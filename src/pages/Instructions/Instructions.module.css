@@ -1,0 +1,56 @@
+.instructionsWrap {
+  display: flex;
+  align-items: flex-end;
+  color: #103742;
+}
+.infos, .faqsWrap {
+  padding: 30px 5px;
+}
+.infos h4, .faqsWrap h4 {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+.infos, .instructionsImg {
+  width: 47%;
+}
+.instructionsImg img {
+  width: 100%;
+  margin-bottom: -3.5px;
+  object-fit: cover;
+}
+.infos {padding-left: 5px;}
+.instruction {
+  display: flex;
+  padding: 15px 0;
+}
+.number {
+  font-size: 40px;
+  font-weight: 600;
+  margin-right: 8px;
+  position: relative;
+}
+.number::after {
+  content: '';
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  top: 12px;
+  left: 5px;
+  border-radius: 50%;
+  background: rgba(150, 38, 137, 0.25);
+}
+.contacts {
+  padding: 30px 0;
+  text-align: center;
+}
+.contacts p {
+  margin: auto;
+  width: 70%;
+  font-size: 18px;
+  line-height: 28px;
+}
+.contacts a {
+  color: #962689;
+  font-weight: 600;
+}
