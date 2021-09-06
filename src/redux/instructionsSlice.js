@@ -9,6 +9,11 @@ export const instructionsSlice = createSlice({
       {num: '3.', text: 'Если вы дарите кому-то, то укажите известные вам данные получателя. Если вы не знаете адреса и удобного времени доставки, оставьте эти поля пустыми и мы сами уточним их у получателя в день доставки'},
       {num: '4.', text: 'В корзине также есть возможность выбрать шоколад и другие дополнительные подарки'},
     ],
+    faqQuestions: [
+      {id: 0, title: "Question", text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit."},
+      {id: 1, title: "Question", text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit."},
+      {id: 2, title: "Question", text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit."},
+    ]
   },
   reducers: {},
 })

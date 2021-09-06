@@ -11,20 +11,20 @@ import { useSelector } from 'react-redux';
 function Main() {
   const mainCardsAPI = useSelector((state) => state.mainPage.mainCards);
   const interestCardsAPI = useSelector((state) => state.mainPage.interestCards);
-  const popularProductAPI = useSelector((state) => state.mainPage.popularProducts);
+  const products = useSelector((state) => state.productsPage.products);
   const testimonialsAPI = useSelector((state) => state.mainPage.testimonials);
   return (
     <main>
       <MainSlider />
       <MainCards data={mainCardsAPI} margin={"-50px"} title={false} />
       <InfoIcons />
-      <Popular title={"Популярные букеты"} data={popularProductAPI} />
+      <Popular title={"Популярные букеты"} data={products} />
       <MainCards
         data={interestCardsAPI}
         margin={"0"}
         title={"Вас заинтересует"}
       />
-      <Popular title={"Вас заинтересует"} data={popularProductAPI} />
+      <Popular title={"Вас заинтересует"} data={products} />
       <InstaPost />
       <Advantage />
       <section className="graybg">

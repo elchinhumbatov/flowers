@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./Middle.css";
 import user from "../../../assets/images/icons/user.png";
-import heart from "../../../assets/images/icons/heart.png";
+// import heart from "../../../assets/images/icons/heart.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faWhatsapp,
@@ -14,11 +14,15 @@ import Login from "../../Login/Login";
 import BasketDrawer from "./BasketDrawer";
 import Menu from "@material-ui/core/Menu";
 import MenuItem from "@material-ui/core/MenuItem";
+import { useSelector } from 'react-redux';
+import FavoriteBorderIcon from "@material-ui/icons/FavoriteBorder";
+// import FavoriteIcon from "@material-ui/icons/Favorite";
 
 function Middle() {
   const [showLogin, setShowLogin] = useState(false);
   const [isAuth, setIsAuth] = useState(true);
   const [anchorEl, setAnchorEl] = useState(null);
+  const favoritesCount = useSelector(state => state.favoritePage.count)
 
   const toggleLogin = () => {
     setShowLogin(!showLogin);
@@ -100,10 +104,10 @@ function Middle() {
             </div>
           )}
           <div className="heartIcon">
-            <NavLink to="/favorites">
-              <img src={heart} alt="heart" />
+            <NavLink to="/favorites" activeClassName='activeNavIcon'>
+              <FavoriteBorderIcon />
             </NavLink>
-            <div className="heartNotif">99</div>
+            {favoritesCount!==0 && <div className="heartNotif">{favoritesCount}</div>}
           </div>
           <div className="basketIcon">
             <BasketDrawer />

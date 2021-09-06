@@ -24,7 +24,7 @@ function Instructions() {
           </p>
         </div>
       </div>
-      <div className="whitebg">
+      <div className={"whitebg "+s.test}>
         <div className="container">
           <div className={s.instructionsWrap}>
             <div className={s.infos}>

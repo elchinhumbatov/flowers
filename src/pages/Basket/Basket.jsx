@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { decrement, increment } from '../../redux/basketSlice'
 
 function Basket() {
-  const count = useSelector((state) => state.counter.value);
+  const count = useSelector((state) => state.basketPage.value);
   const dispatch = useDispatch();
   return (
     <div>

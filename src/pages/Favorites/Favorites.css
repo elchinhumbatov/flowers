@@ -1,11 +1,11 @@
 .products {
   display: flex;
-  justify-content: space-between;
+  /* justify-content: space-between; */
   flex-wrap: wrap;
   padding: 40px;
 }
 .products>div {
-  width: 17%;
+  width: 170px;
   margin: 10px;
 }
 
@@ -13,17 +13,17 @@
   .products {
     padding: 40px 30px;
   }
-  .products>div {
+  /* .products>div {
     width: 20%;
-  }
+  } */
 }
 @media screen and (max-width: 500px) {
   .products {
     padding: 40px 20px;
   }
-  .products>div {
+  /* .products>div {
     width: 43%;
-  }
+  } */
 }
 @media screen and (max-width: 350px) {
   .products {

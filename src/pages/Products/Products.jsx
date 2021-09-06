@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 import s from "./Products.module.css";
 import Roadmap from "../../components/Roadmap/Roadmap";
 import Filter from "./Filter/Filter";
@@ -7,7 +7,7 @@ import { useSelector } from "react-redux";
 import Sort from "./Sort/Sort";
 
 function Products() {
-  const [productWidth, setProductWidth] = useState('170px')
+  const [productWidth, setProductWidth] = useState("170px");
   const products = useSelector((state) => state.productsPage.products);
   const favorites = {
     last: "Кому",
@@ -41,7 +41,14 @@ function Products() {
                 //     </div>
                 //   );
                 // } else {
-                  return <Product item={item} key={idx} productWidth={productWidth} />;
+                return (
+                  <Product
+                    item={item}
+                    idx={idx}
+                    key={item.id}
+                    productWidth={productWidth}
+                  />
+                );
                 // }
               })}
             </div>

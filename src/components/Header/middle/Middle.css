@@ -79,8 +79,12 @@ nav li a {
 .middleNavBur .number p {
   font-size: 20px;
 }
+
 .heartIcon {
   position: relative;
+}
+.heartIcon a, #simple-menu a {
+  color: #103742;
 }
 .heartNotif, .basketNotif {
   width: 20px;
@@ -101,9 +105,12 @@ nav li a {
 .activeNavName {
   color: #962689 !important;
 }
+.activeNavIcon>svg {
+  fill: #962689;
+}
 #toCab ul {
   display: block;
-} 
+}
 
 
 

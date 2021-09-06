@@ -11,8 +11,14 @@
   font-weight: 600;
   margin-bottom: 15px;
 }
-.infos, .instructionsImg {
-  width: 47%;
+.infos {
+  width: 50%;
+}
+.instructionsImg {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 40%;
 }
 .instructionsImg img {
   width: 100%;
@@ -53,4 +59,7 @@
 .contacts a {
   color: #962689;
   font-weight: 600;
+}
+.test {
+  position: relative;
 }

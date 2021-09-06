@@ -15,7 +15,7 @@ import PaymentOptions from '../Delivery/PaymentOptions';
 function ProductPage() {
   const { id } = useParams();
   const products = useSelector((state) => state.productsPage.products);
-  const recomendations = useSelector((state) => state.productsPage.recomendations);
+  const recomendations = useSelector((state) => state.productPage.recomendations);
 
   let product = products.find((item) => item.id === +id);
 

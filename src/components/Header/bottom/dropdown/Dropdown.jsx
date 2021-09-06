@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 import s from './Dropdown.module.css'
 
 function Dropdown({ subcat, displayOpt, handleCloseDrawer }) {
-  
   return (
     <div>
       {subcat.title ? <Link className={s.titleLink} to='/'>{subcat.title} -{">"}</Link> : null}
