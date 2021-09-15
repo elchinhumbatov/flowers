@@ -10,7 +10,7 @@ import FavoriteIcon from "@material-ui/icons/Favorite";
 import ShoppingBasketOutlinedIcon from "@material-ui/icons/ShoppingBasketOutlined";
 import VisibilityOutlinedIcon from "@material-ui/icons/VisibilityOutlined";
 
-function Product({ item, idx, productWidth }) {
+function Product({ item, productWidth }) {
   const [scaleUp, setScaleUp] = useState(false);
   const dispatch = useDispatch();
   const toggleFavorites = () => {

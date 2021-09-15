@@ -101,21 +101,25 @@
   display: inline-block;
   outline: none;
   border-radius: 5px;
-  padding: 10px 0;
   margin: 7px 0;
   width: 80%;
-  border: 0.2px solid #103742;
+  cursor: pointer;
 }
 .orderNow {
   background: #962689;
+  border: 0.2px solid #962689;
   color: #fff;
+  padding: 10px 0;
 }
 .toBasket {
   border: 0.2px solid #103742;
   background: none;
 }
 .toBasket a {
+  display: inline-block;
   color: #103742;
+  width: 100%;
+  padding: 10px 0;
 }
 .basketIcon {
   position: relative;

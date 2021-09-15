@@ -1,6 +1,6 @@
+import "./App.css";
 import { ThemeProvider } from "@material-ui/core";
 import { BrowserRouter } from "react-router-dom";
-import "./App.css";
 import Footer from "./components/Footer/Footer";
 import Header from "./components/Header/Header";
 import RouterConfig from "./navigations/RouterConfig";

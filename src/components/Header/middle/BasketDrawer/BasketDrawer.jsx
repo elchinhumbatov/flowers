@@ -1,6 +1,6 @@
 import React from "react";
 import s from './BasketDrawer.module.css';
-import basket from "../../../assets/images/icons/basket.png";
+import basket from "../../../../assets/images/icons/basket.png";
 import SwipeableDrawer from "@material-ui/core/SwipeableDrawer";
 import List from "@material-ui/core/List";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";

@@ -20,7 +20,7 @@ function BasketDrawerItem() {
         <div className={s.itemWrap}>
           <div className={s.imgBlock}>
             <img
-              src={require("../../../assets/images/basket/b0.png").default}
+              src={require("../../../../assets/images/basket/b0.png").default}
               alt=""
             />
           </div>

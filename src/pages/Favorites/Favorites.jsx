@@ -22,7 +22,7 @@ function Favorites() {
         <div style={{ background: "#fff" }}>
           <div className='products'>
             {favorites.length ? favorites.map((item, idx) => {
-              return <Product item={item} idx={idx} key={idx} />;
+              return <Product item={item} key={idx} productWidth={100/6+'%'} />;
             }) : 'no items yet'}
           </div>
         </div>

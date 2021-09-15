@@ -1,5 +1,10 @@
 .product {
-  margin: 0 10px;
+  /* margin: 0 10px; */
+  padding: 10px;
+  border-radius: 5px;
+}
+.product:hover {
+  border: 1px solid #962689;
 }
 .imgBox {
   border-radius: 5px;

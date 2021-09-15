@@ -7,7 +7,7 @@ import { useSelector } from "react-redux";
 import Sort from "./Sort/Sort";
 
 function Products() {
-  const [productWidth, setProductWidth] = useState("170px");
+  const [productWidth, setProductWidth] = useState("20%");
   const products = useSelector((state) => state.productsPage.products);
   const favorites = {
     last: "Кому",
@@ -44,7 +44,6 @@ function Products() {
                 return (
                   <Product
                     item={item}
-                    idx={idx}
                     key={item.id}
                     productWidth={productWidth}
                   />

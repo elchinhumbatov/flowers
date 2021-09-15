@@ -15,7 +15,7 @@ function Sort({setProductWidth}) {
   const [priceSort, setPriceSort] = useState(true);
   const toggleView = (view) => {
     setViewColors(view);
-    view === 'first' ? setProductWidth('170px') : setProductWidth('250px');
+    view === 'first' ? setProductWidth('20%') : setProductWidth(100/3+'%');
   };
 
   return (

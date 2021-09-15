@@ -52,7 +52,7 @@ function MiddleNav() {
 
   return (
     <div className='middleNavBurWrap'>
-      <React.Fragment>
+      <>
         <Button onClick={toggleDrawer(true)}>
           <FontAwesomeIcon icon={faEllipsisV} />
         </Button>
@@ -64,7 +64,7 @@ function MiddleNav() {
         >
           {list()}
         </SwipeableDrawer>
-      </React.Fragment>
+      </>
     </div>
   );
 }
